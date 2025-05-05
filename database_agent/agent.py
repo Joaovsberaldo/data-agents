@@ -1,11 +1,11 @@
 from crewai import Agent, Task, Crew, LLM
 from crewai.crew import CrewOutput
 from crewai_tools import NL2SQLTool
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import os
 
 # Load environment variables
-load_dotenv(".env")
+load_dotenv(find_dotenv())
 
 class DatabaseCrew:
     def __init__(self, nl2sqltool: NL2SQLTool, llm: LLM):
