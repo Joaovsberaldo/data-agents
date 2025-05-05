@@ -74,7 +74,7 @@ llm: LLM = LLM(
 )
 
 db_crew = DatabaseCrew(nl2sqltool=nl2sql, llm=llm).crew()
-question = input("")
+question = input("Enter your question for the agent: ")
 crew_output: CrewOutput = db_crew.kickoff(inputs={
     "question": question
 })
